@@ -1,0 +1,25 @@
+# ensure you have curl installed
+> sudo apt install curl
+
+# enter user password if prompted
+
+Press ctrl + A to get to start of command line
+Press ctrl + E to get to end of command line
+
+# download Docker installation script and save to /tmp/get-docker.sh 
+> curl -o <path-to-directory> <download-site>
+> curl -o /tmp/get-docker.sh https://get.docker.com
+
+# execute docker installation script
+> sh /tmp/get-docker.sh 
+
+# to verify docker is working
+> sudo docker run hello-world
+
+# to workaround having to use sudo whenever use docker commands, add user to docker group 
+> sudo usermod -aG docker <username>
+
+# alternative
+> sudo usermod -aG docker $USER
+
+# for changes to take effect, log out of entire system and log back in again 
